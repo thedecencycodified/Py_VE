@@ -31,8 +31,11 @@ print(myTuple)
 # =============== Difference =================
 # Empty list, tuple, set
 a = []
-a = list()
+a = list()  # this feature is no more exist in python i.e. now this dont work for list in updated python
 b = ()
 b = tuple()
 c = {}  # its a dictionary not set
 c = set()
+"""im writing a comment in different lines
+that must be ignored by python
+hence python works as directed"""
