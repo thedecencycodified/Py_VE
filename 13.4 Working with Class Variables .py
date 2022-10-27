@@ -4,6 +4,7 @@ import math
 
 
 class Student:
+    numberOfStudents = 0
     scholarship_increment = 1.10
 
     def __init__(self, fname, lname, id, FatherName, scholarship):
@@ -12,6 +13,8 @@ class Student:
         self.id = id
         self.FatherName = FatherName
         self.scholarship = scholarship
+
+        Student.numberOfStudents += 1
 
     def __str__(self):
         return f'ID: {self.id}\nFull Name: {self.fname} {self.lname}\nFather Name: {self.FatherName}\nCurrent Scholarship: {self.scholarship}\nNext year your Scholarship will be Increased by,\nAnnual Increment: {str(math.floor((Student.scholarship_increment*100)-100))}%  \nScholarship: {self.scholarship*self.scholarship_increment}'
@@ -22,9 +25,16 @@ class Student:
 
 std1 = Student('Farhan', 'Qadir', 5562, 'Abdul Qadir', 10000)
 std2 = Student('Haris', 'Zuberi', 6652, 'Waris Zuberi', 15000)
-
+std3 = Student('Haris', 'Zuberi', 6652, 'Waris Zuberi', 15000)
+std4 = Student('Haris', 'Zuberi', 6652, 'Waris Zuberi', 15000)
+std5 = Student('Haris', 'Zuberi', 6652, 'Waris Zuberi', 15000)
+print(Student.numberOfStudents)
 print(std1)
 print(std2)
+print(std3)
+print(std4)
+print(std5)
+print(Student.numberOfStudents)
 '''annual_increment = str(math.floor((Student.scholarship_increment*100)-100))+'%'
 print(annual_increment)'''
 
