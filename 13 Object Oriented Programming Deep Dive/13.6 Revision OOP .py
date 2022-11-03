@@ -1,4 +1,5 @@
 # ============================ OOP Revision ========================\
+import datetime
 import math
 
 
@@ -25,6 +26,18 @@ class Employee:
         first_name, last_name, salary, middle_name = emp_str.split('-')
         return cls(first_name, last_name, salary, middle_name)
 
+# regularmethods self
+# classmethod cls
+# staticmethod
+# monday 0
+# SUNDAY 6
+
+    @staticmethod
+    def is_workingday(day):
+        if day.weekday() == 5 or day.weekday() == 6:
+            return f'It\'s Your Holiday!!'
+        return f'Its Your Working Day'
+
 
 emp1 = Employee('Muhammad', 'Taimoor', 100000, 'Salahuddin')
 emp2 = Employee('Azam', 'Shaheed', 120000)
@@ -40,3 +53,7 @@ print()
 print(emp3)
 print()
 print(f'Total Employees: {Employee.numberOfEmployees}')
+
+
+my_date = datetime.date(2022, 11, 3)
+print(Employee.is_workingday(my_date))
